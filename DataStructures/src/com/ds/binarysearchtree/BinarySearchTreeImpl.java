@@ -74,22 +74,28 @@ public class BinarySearchTreeImpl<E extends Comparable<E>> {
 		}
 	}
 
-	public void search(NodeTree<E> root, E value) {
+	public NodeTree<E> search(NodeTree<E> root, E value) {
 		System.out.println(root.getValue());
 		if(0<root.getValue().compareTo(value)) {
 			if(root.hasLeftNode()) {
-				search(root.getLeft(), value);
+				return search(root.getLeft(), value);
 			}
 		}
 		else if(0>root.getValue().compareTo(value)) {
 			if(root.hasRightNode()) {
-				search(root.getRight(), value);
+			 return	search(root.getRight(), value);
 			}
 		}
-		
+		else if (0 ==root.getValue().compareTo(value) ) {
+			return root;
+		}
+			
 		else {
 			System.out.println("Value is not found");
+			return null;
 		}
+		System.out.println("Value is not found");
+		return null;
 	}
 
 }
