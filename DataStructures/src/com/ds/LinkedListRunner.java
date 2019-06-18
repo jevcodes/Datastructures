@@ -21,6 +21,9 @@ public class LinkedListRunner {
 		System.out.println("\n\n Removed: \n");
 		linkedList.traverse(linkedList.getHead());
 		
+		linkedList.update("shoulders", "Eyes and Ears");
+		System.out.println("\n\n Updated: \n");
+		linkedList.traverse(linkedList.getHead());
 	}
 
 }
