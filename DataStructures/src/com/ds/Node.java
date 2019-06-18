@@ -1,47 +1,47 @@
 package com.ds;
 
-public class Node {
+public class Node<E> {
 	
-	Node previous;
-	Node next;
-	String value;
-	public Node(Node previous, Node next, String value) {
-		super();
-		this.previous = previous;
-		this.next = next;
-		this.value = value;
+	Node<E> previous;
+	Node<E> next;
+	E value;
+	public Node(Node<E> previousNode, Node<E> nextNode, E valueNode) {
+		
+		this.previous = previousNode;
+		this.next = nextNode;
+		this.value = valueNode;
 	}
 	
 	public Node() {
 		
 	}
 
-	public Node getPrevious() {
+	public Node<E> getPrevious() {
 		return previous;
 	}
 
-	public void setPrevious(Node previous) {
+	public void setPrevious(Node<E> previous) {
 		this.previous = previous;
 	}
 
-	public Node getNext() {
+	public Node<E> getNext() {
 		return next;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(Node<E> next) {
 		this.next = next;
 	}
 
-	public String getValue() {
+	public E getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(E value) {
 		this.value = value;
 	}
 	
 	public boolean hasNext() {
-		Node temp = this.next;
+		Node<E> temp = this.next;
 		if(null!=temp) {
 			return true;
 		}
@@ -51,7 +51,7 @@ public class Node {
 	}
 	
 	public boolean hasPrevious() {
-		Node temp = this.previous;
+		Node<E> temp = this.previous;
 		if(null!=temp) {
 			return true;
 		}
