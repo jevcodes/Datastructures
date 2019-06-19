@@ -59,6 +59,8 @@ local.properties
 # sbteclipse plugin
 .target
 
+BinarySearchTreeImpl/
+
 # Tern plugin
 .tern-project
 
