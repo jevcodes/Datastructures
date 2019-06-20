@@ -73,14 +73,30 @@ class Solution {
 	
 	
 	public static char translate(char c) {
-		if(c==')') {
+		/*if(c==')') {
 			return '(';
 		}
 		else if (c=='}') {
 			return '{';
 		}
 		
-		return ' ';
+		return ' ';*/
+		
+		switch (c) {
+		case ')':
+		{
+			return '(';
+		}
+		case '}':
+		{
+			return '{';
+		}
+		default:
+			return ' ';
+			
+		
+		}
+		
 	}
 	
 }
